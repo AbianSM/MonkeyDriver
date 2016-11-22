@@ -14,6 +14,6 @@ public class ListBus implements Bus {
 
     @Override
     public void send(Message message) {
-        subscribers.forEach(s -> s.receive(message));
+        this.subscribers.forEach(subscriber -> subscriber.receive(message));
     }
 }
